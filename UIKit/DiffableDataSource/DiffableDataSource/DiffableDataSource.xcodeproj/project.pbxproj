@@ -16,6 +16,7 @@
 		F3206CBB2B2FF3740008AFC6 /* DiffableDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3206CBA2B2FF3740008AFC6 /* DiffableDataSourceTests.swift */; };
 		F3206CC52B2FF3740008AFC6 /* DiffableDataSourceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3206CC42B2FF3740008AFC6 /* DiffableDataSourceUITests.swift */; };
 		F3206CC72B2FF3740008AFC6 /* DiffableDataSourceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3206CC62B2FF3740008AFC6 /* DiffableDataSourceUITestsLaunchTests.swift */; };
+		F3A4380E2B3142AF008F8DF3 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4380D2B3142AF008F8DF3 /* MyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F3206CC02B2FF3740008AFC6 /* DiffableDataSourceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiffableDataSourceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3206CC42B2FF3740008AFC6 /* DiffableDataSourceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourceUITests.swift; sourceTree = "<group>"; };
 		F3206CC62B2FF3740008AFC6 /* DiffableDataSourceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F3A4380D2B3142AF008F8DF3 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				F3206CA32B2FF3730008AFC6 /* AppDelegate.swift */,
 				F3206CA52B2FF3730008AFC6 /* SceneDelegate.swift */,
 				F3206CA72B2FF3730008AFC6 /* ViewController.swift */,
+				F3A4380D2B3142AF008F8DF3 /* MyCollectionViewCell.swift */,
 				F3206CA92B2FF3730008AFC6 /* Main.storyboard */,
 				F3206CAC2B2FF3740008AFC6 /* Assets.xcassets */,
 				F3206CAE2B2FF3740008AFC6 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				F3206CA82B2FF3730008AFC6 /* ViewController.swift in Sources */,
 				F3206CA42B2FF3730008AFC6 /* AppDelegate.swift in Sources */,
+				F3A4380E2B3142AF008F8DF3 /* MyCollectionViewCell.swift in Sources */,
 				F3206CA62B2FF3730008AFC6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
