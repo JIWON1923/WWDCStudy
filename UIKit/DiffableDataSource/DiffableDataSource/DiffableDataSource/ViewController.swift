@@ -20,21 +20,22 @@ class ViewController: UIViewController {
     
     @IBAction func didTappedAddButton(_ sender: UIButton) {
         var value: Int
+        let indexPath = IndexPath(row: data.count, section: 0)
         if let item = data.last {
             value = item + 1
         } else {
             value = 1
         }
         data.append(value)
-        collectionView.reloadData()
+        collectionView.insertItems(at: [indexPath])
     }
     
     @IBAction func didTappedDeleteButton(_ sender: UIButton) {
         guard !data.isEmpty else { return }
         let randomIndex = Int.random(in: 0 ..< data.count)
+        let indexPath = IndexPath(row: randomIndex, section: 0)
         data.remove(at: randomIndex)
-        collectionView.reloadData()
-
+        collectionView.deleteItems(at: [indexPath])
     }
 }
 
