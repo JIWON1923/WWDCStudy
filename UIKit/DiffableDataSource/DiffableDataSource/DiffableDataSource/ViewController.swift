@@ -11,11 +11,29 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private var data: [Int] = Array(1...10)
+    private var data: [Int] = Array(1...5)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    @IBAction func didTappedAddButton(_ sender: UIButton) {
+        var value: Int
+        if let item = data.last {
+            value = item + 1
+        } else {
+            value = 1
+        }
+        data.append(value)
+        collectionView.reloadData()
+    }
+    
+    @IBAction func didTappedDeleteButton(_ sender: UIButton) {
+        guard !data.isEmpty else { return }
+        data.removeLast()
+//        collectionView.deleteItems(at: [IndexPath(row: data.count, section: 0)])
+        collectionView.reloadData()
     }
 }
 
