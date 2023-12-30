@@ -31,9 +31,10 @@ class ViewController: UIViewController {
     
     @IBAction func didTappedDeleteButton(_ sender: UIButton) {
         guard !data.isEmpty else { return }
-        data.removeLast()
-//        collectionView.deleteItems(at: [IndexPath(row: data.count, section: 0)])
+        let randomIndex = Int.random(in: 0 ..< data.count)
+        data.remove(at: randomIndex)
         collectionView.reloadData()
+
     }
 }
 
