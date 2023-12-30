@@ -37,6 +37,15 @@ class ViewController: UIViewController {
         data.remove(at: randomIndex)
         collectionView.deleteItems(at: [indexPath])
     }
+    
+    @IBAction func didTappedSwapButton(_ sender: UIButton) {
+        guard !data.isEmpty else { return }
+        data.swapAt(0, data.count - 1)
+        let startIndexPath = IndexPath(row: 0, section: 0)
+        let endIndexPath = IndexPath(row: data.count - 1, section: 0)
+        collectionView.moveItem(at: startIndexPath, to: endIndexPath)
+        collectionView.moveItem(at: endIndexPath, to: startIndexPath)
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
