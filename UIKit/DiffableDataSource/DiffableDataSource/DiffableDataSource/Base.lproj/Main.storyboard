@@ -90,6 +90,9 @@
                                         <color key="tintColor" red="0.42814314370000001" green="0.78175002339999999" blue="0.35684859749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Sawp First And Last Item"/>
+                                        <connections>
+                                            <action selector="didTappedSwapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wto-SC-I4U"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
