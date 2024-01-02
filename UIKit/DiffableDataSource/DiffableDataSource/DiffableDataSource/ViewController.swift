@@ -56,9 +56,7 @@ class ViewController: UIViewController {
             }
             
             DispatchQueue.main.async { [self] in
-                collectionView.performBatchUpdates({
-                    collectionView.deleteItems(at: indexPaths)
-                }, completion: nil)
+                collectionView.reloadData()
             }
         }
     }
