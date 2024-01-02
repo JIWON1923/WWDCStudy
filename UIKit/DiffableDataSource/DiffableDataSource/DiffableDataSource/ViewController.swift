@@ -19,23 +19,48 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTappedAddButton(_ sender: UIButton) {
-        var value: Int
-        let indexPath = IndexPath(row: data.count, section: 0)
-        if let item = data.last {
-            value = item + 1
-        } else {
-            value = 1
+        
+        DispatchQueue.global().async { [self] in
+            var value: Int
+            var indexPaths = [IndexPath]()
+           
+            for _ in 0..<10 {
+                if let item = data.last {
+                    value = item + 1
+                } else {
+                    value = 1
+                }
+                let indexPath = IndexPath(row: data.count, section: 0)
+                data.append(value)
+                indexPaths.append(indexPath)
+            }
+            
+            DispatchQueue.main.async { [self] in
+                collectionView.performBatchUpdates({
+                    collectionView.insertItems(at: indexPaths)
+                }, completion: nil)
+            }
         }
-        data.append(value)
-        collectionView.insertItems(at: [indexPath])
     }
     
     @IBAction func didTappedDeleteButton(_ sender: UIButton) {
-        guard !data.isEmpty else { return }
-        let randomIndex = Int.random(in: 0 ..< data.count)
-        let indexPath = IndexPath(row: randomIndex, section: 0)
-        data.remove(at: randomIndex)
-        collectionView.deleteItems(at: [indexPath])
+        
+        DispatchQueue.global().async { [self] in
+            guard !data.isEmpty else { return }
+            var indexPaths = [IndexPath]()
+            for _ in 0 ..< min(data.count, 3) {
+                let randomIndex = Int.random(in: 0 ..< data.count)
+                let indexPath = IndexPath(row: randomIndex, section: 0)
+                data.remove(at: randomIndex)
+                indexPaths.append(indexPath)
+            }
+            
+            DispatchQueue.main.async { [self] in
+                collectionView.performBatchUpdates({
+                    collectionView.deleteItems(at: indexPaths)
+                }, completion: nil)
+            }
+        }
     }
     
     @IBAction func didTappedSwapButton(_ sender: UIButton) {
